@@ -6,14 +6,14 @@ node {
    stage('Build Test & Package') {
       echo 'Build the package'
       withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
-      cd samplejavaapplication
+     //cd samplejavaapplication
       bat 'mvn clean compile'
      }
    }
    stage('Artifacts') {
        echo 'package the project artifacts..'
        withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
-       cd samplejavaapplication
+      // cd samplejavaapplication
        bat 'mvn package'
      }
    
